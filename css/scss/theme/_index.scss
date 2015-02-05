@@ -1,0 +1,97 @@
+.site-main {
+
+
+	.description {
+		padding:2em 10%;
+		position:relative;
+		@include clear();
+		@include mq(desk) {padding: 2em 15%;}
+		@include mq(tablet) {padding:2em 2.5%;}
+		@include mq(phone) {padding:2em 2.5%;}
+		
+		.description-image {float:left; 
+			width:50%;
+			@include mq(phone) {width:100%;}
+		}
+		
+		.description-txt {float:left; 
+			width:50%;
+			margin-top:1em;
+			padding:0 5%;
+			@include mq(tablet) {}
+			@include mq(phone) {width:100%; margin-top:0}		
+		}
+		
+		.image-alternate {float:right}
+		
+		.wpcf7 {float:left; 
+			width:50%;
+			margin-top:1em;
+			padding:0 5%;	
+			@include mq(tablet) {}
+			@include mq(phone) {width:100%; margin-top:0}		
+		}
+		
+		h2 {font-family: 'droid_serifregular', serif;
+			text-transform:uppercase;
+			color: $white;
+			text-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+		}
+		
+		p {font-size:1.5em;
+			width:100%;
+			margin:0;
+			@include mq(tablet) {width:100%;}
+			@include mq(phone) {width:100%;}
+			//color: lighten($gris, 10%);
+		}
+			
+		
+	}
+
+	.description-1 {
+		background-color:$azul-indigo;
+		color : lighten($azul-indigo, 30%);
+	}
+	
+	.description-2 {
+		background-color:$azul-sea;
+		color : darken($azul-sea, 20%);
+	}
+	
+	.description-3 {
+		background-color:$green;
+		color : darken($green, 25%);
+	}
+	
+	.description-4 {
+		background-color:$orange;
+		color : darken($orange, 25%);
+		
+		p {width:100%}
+	}
+	
+	/* Triangles */
+	.triangle::after {
+		position: absolute;
+		content: '';
+		pointer-events: none;
+		left: 50%;
+		width: 40px;
+		height: 40px;
+		-webkit-transform: translateX(-50%) rotate(45deg);
+		transform: translateX(-50%) rotate(45deg);
+	}
+
+	.triangle::after {
+		bottom: -20px;
+		z-index: 10;
+	}
+	
+	.triangle-1::after {background-color:$azul-indigo;}
+	.triangle-2::after {background-color:$azul-sea;}
+	.triangle-3::after {background-color:$green;}
+	.triangle-4::after {background-color:$orange;}
+	
+	
+}

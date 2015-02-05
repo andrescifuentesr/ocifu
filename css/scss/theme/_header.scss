@@ -1,0 +1,182 @@
+.site-header {background-color:$red;
+			padding: 0.5em 10% 0;
+			width:100%;
+			height:100%;
+			position:relative;
+			@include mq(desk) {padding: 0.5em 15% 0;}
+			@include mq(tablet) {padding:0.5em 5% 0;}
+			@include mq(phone) {padding: 0.4em  0 0 2.5%;}
+			
+
+	.site-branding {width:20%;
+		float: left;
+		@include mq(phone) {width:70%;
+							position:absolute;
+							left:1em;
+							z-index:1000;
+							margin-top: .5em;
+		}
+		
+		
+		h1 a {background: url('../../../img/logo-cuyabro.svg');
+			display:block;
+			width:130px;
+			height:130px;
+			@include linkTextOffscreen();
+			@include mq(phone) {
+								width:200px;
+								height:45px;
+								background: url('../../../img/logo-cuyabro-small.svg');
+			}
+		}
+	}
+	
+	.main-navigation {width:80%;
+					float: left;
+					position:relative;
+					@include mq(phone) {width:100%;}
+		
+					h1 {text-align:center;
+						margin-top:0;
+						text-indent:-9999px;
+						@include mq(phone) {float: right;
+											border-radius:0.6em;
+											height:1em;
+											width:1em;
+											margin-right:0.15em;
+											background: url('../../../img/icon-menu.svg') lighten($red, 25%) no-repeat center center;
+						}
+						
+					}
+	}
+
+}
+
+
+/* =Menu
+----------------------------------------------- */
+
+.main-navigation {
+	display: block;
+}
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	float: right;
+	@include mq(phone) {float:none;
+						position:absolute;
+						z-index:2000; 
+						width:100%;
+	}
+}
+.main-navigation li {
+	float: left;
+	position: relative;
+	margin : 0 1em;
+	@include mq(phone) {width:100%;
+						margin:0;
+	}
+}
+.main-navigation a:before {
+	content:'';
+	display: block;
+	border-radius:1.5em;
+	height:3em;
+	width:3em;
+	@include mq(phone) {margin:0 auto;}
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+	margin-top:1.5em;
+	text-align:center;
+	color:white;
+	@include transition(color, 0.2s, ease-in-out);
+	@include mq(phone) {margin-top:0;
+						//text-indent:-9999px;
+						float:right;
+						background: $red;
+						padding:0.5em 0.5em 0;
+						width: 5em;
+	}
+}
+
+.main-navigation a:hover {
+	color: lighten($red, 25%);
+}
+
+.main-navigation .menu-item-15 a:before {
+	background: url('../../../img/home.svg') lighten($red, 25%) no-repeat center center;
+}
+
+.main-navigation .menu-item-18 a:before {
+	background: url('../../../img/cravatte.svg') lighten($red, 25%) no-repeat center center;
+}
+
+.main-navigation .menu-item-36 a:before {
+	background: url('../../../img/pen.svg') lighten($red, 25%) no-repeat center center;
+}
+
+.main-navigation .menu-item-17 a:before {
+	background: url('../../../img/enveloppe.svg') lighten($red, 25%) no-repeat center center;
+}
+
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a {
+	color: lighten($red, 25%);
+}
+
+.main-navigation .current_page_item a:before,
+.main-navigation .current-menu-item a:before {
+	background-color: lighten($red, 15%);
+}
+
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	display: none;
+	float: left;
+	position: absolute;
+		top: 1.5em;
+		left: 0;
+	z-index: 99999;
+}
+.main-navigation ul ul ul {
+	left: 100%;
+	top: 0;
+}
+.main-navigation ul ul a {
+	width: 200px;
+}
+.main-navigation ul ul li {
+}
+.main-navigation li:hover > a {
+}
+.main-navigation ul ul :hover > a {
+}
+.main-navigation ul ul a:hover {
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+}
+
+
+/* Small menu */
+.menu-toggle {
+	display: none;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 45em) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+
+	.main-navigation ul {
+		display: none;
+		margin-top:4em;
+	}
+}

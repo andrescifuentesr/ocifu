@@ -1,0 +1,42 @@
+// SET UP YOUR VARIABLES IN THIS FILE
+
+
+// Colours
+// ------------------------------------------------------------
+
+// Define your main colour palette
+// principal
+$red: #e44d42;
+$gris: #333333;
+$white: #ffffff;
+
+// colors home
+$azul-indigo: #547794;
+$azul-sea: #3498db;
+$azul-footer: #34495e;
+$green: #7DB6B0;
+$orange: #f39c12;
+
+
+
+
+
+
+$primary							: #666;
+$secondary							: #222;	
+$tertiary							: #444;
+
+
+
+// Assign colours to variable roles
+$base-color							: $primary;
+$heading-color						: $secondary;
+$secondary-heading-color			: $tertiary;
+
+
+
+// Links
+$action								: $primary;
+$action-respond						: $secondary;
+$secondary-action					: $action-respond;
+$secondary-action-respond			: $action;

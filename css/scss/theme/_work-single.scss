@@ -1,0 +1,62 @@
+.work-single {width:100%;
+			padding: 3em 18% 1em;
+			font-size:1.3em;
+			font-family: $font-family;
+			@include mq(desk) {padding: 3em 20% 1em;}
+			@include mq(tablet) {padding: 3em 10% 1em;}
+			@include mq(phone) {padding: 1em 2.5% 1em;}
+
+		.entry-title {text-align:center; 
+					color:$gris;
+					margin-bottom:0.5em;
+					@include mq(phone) {font-size:2em;}
+		}
+		
+		.module-central {
+				position: relative;
+				//padding: 0 20%;
+				color:$gris;
+				margin-top:2em;
+				display:inline-block;
+				width:75%;
+				padding-left:25%;
+				vertical-align:top;
+				@include mq(tablet) {margin-top:2em;}
+				@include mq(phone) {margin-top:0.5em; width:100%; padding-left:0%;}
+		}		
+		
+		.module-side {
+				position: relative;
+				margin-top:2em;
+				display:inline-block;
+				width:25%;
+				vertical-align:top;
+				@include mq(tablet) {margin-top:2em;}
+				@include mq(phone) {margin:0.5em 0 2em; width:100%; text-align:center;}
+				
+				.bt-work-link {
+					float:right;
+					text-align:center;
+					font-size:0.8em;
+					padding: 5px 10px;
+					border-radius: 2px;
+					display: inline-block;
+					background: $red;
+					color: #fff;
+					@include transition(background, 0.2s, ease-in-out);
+					@include mq(phone) {float:none; padding: 1em 2em;}
+				}
+
+				.bt-work-link:hover {
+					color: #fff;
+					background: lighten($red, 5%);
+				}
+		}
+		
+		
+		a {color:$red;
+			@include transition(color, 0.2s, ease-in-out);
+
+			&:hover {color:$gris;}
+		}
+}

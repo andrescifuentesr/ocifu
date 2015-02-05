@@ -1,0 +1,61 @@
+.notes {
+	margin:4em 0;
+	@include mq(tablet) {margin:2em 0;}
+	@include mq(phone) {margin:2em 0;}
+	
+	
+	.module-notes,
+	.post-navigation {margin: 0 20%;
+			font-size:1.5em;
+			font-family: $font-family;
+			color:$gris;
+			@include mq(tablet) {width:90%; margin: 0 5% 1em;}
+			@include mq(phone) {width:90%; margin: 0 5% 1em;}
+	}
+	
+	.entry-title {@include mq(phone) {font-size:2em;} 
+		a {color:$gris;
+			@include transition(color, 0.2s, ease-in-out);
+
+			&:hover {color:$red;}
+		}
+	}
+	
+	.entry-content img {margin:1em aut 0;}
+	
+	.entry-date {color: lighten($gris, 40%); 
+				font-family: 'droid_serifitalic';
+				@include transition(color, 0.2s, ease-in-out);
+				
+				&:hover {color:$red;}
+	}	
+	
+	a {color:$red;
+		@include transition(color, 0.2s, ease-in-out);
+		
+		&:hover {color:$gris;}
+	}
+	
+	p {margin-top: 1em;
+		max-width:36em;
+	}
+	
+	
+	.read-more {color:$red;
+				font-family: 'droid_serifitalic';
+				@include transition(color, 0.2s, ease-in-out);
+				
+				&:hover {color:$gris;}
+	}
+	
+	.bt-link {
+		text-align:center;
+		font-size:0.8em;
+		padding: 5px 10px;
+		border-radius: 2px;
+		display: inline-block;
+		background: $red;
+		color: #fff;
+		@include transition(background, 0.2s, ease-in-out);
+	}
+}

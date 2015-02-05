@@ -1,0 +1,32 @@
+.work {width:80%;
+		margin: 0 10% 1em;
+		@include mq(desk) {width:70%; margin: 0 15% 1em;}
+		@include mq(tablet) {width:90%; margin: 0 5% 1em;}
+		@include mq(phone) {width:95%; margin: 0 2.5% 1em;}
+
+		.entry-title, h2 {text-align:center; margin: 2em 0 0; }
+		
+		.grid {margin-left:-5em;
+				text-align:left;
+				position: relative;
+				@include mq(phone) {padding-top:0.5em;}
+		}
+		
+		.module {margin-top:6em;
+				position: relative;
+				
+				@extend %grid__item;
+		        @extend %one-half;
+				@extend %phone--one-whole;
+				@include mq(tablet) {margin-top:2em;}
+				@include mq(phone) {margin-top:2em;}
+		}
+		
+		.description-work {margin: 0.5em 0;					
+		}
+		
+		h4 {
+			@include mq(tablet) {font-size: 1em;}
+			@include mq(phone) {font-size: 1em;}
+		}
+}

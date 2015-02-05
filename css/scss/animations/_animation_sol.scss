@@ -1,0 +1,27 @@
+@-moz-keyframes solecito {  
+0%{top:10%; -moz-transform: rotate(0deg); }
+50%{top:0%; }
+80%{top:5%; }
+100%{top:10%; -moz-transform: rotate(360deg);}
+} 
+
+@-webkit-keyframes solecito {  
+0%{top:10%; -webkit-transform: rotate(0deg); }
+50%{top:0%; }
+80%{top:5%; }
+100%{top:10%; -webkit-transform: rotate(360deg);}
+}
+
+@-o-keyframes solecito {  
+0%{top:10%; -o-transform: rotate(0deg); }
+50%{top:0%; }
+80%{top:5%; }
+100%{top:10%; -o-transform: rotate(360deg);}
+}
+
+@-keyframes solecito {  
+0%{top:10%; -transform: rotate(0deg); }
+50%{top:0%; }
+80%{top:5%; }
+100%{top:10%; -transform: rotate(360deg);}
+}

@@ -1,0 +1,44 @@
+.post-9 {
+		.entry-title, h2 {margin: 0 0 1em 0; text-align:left;}
+		
+		.grid {margin-left:-5em;
+				text-align:left;
+				position: relative;
+				@include mq(phone) {padding-top:0.5em;}
+		}
+		
+		.module {margin-top:6em;
+				position: relative;
+				
+				@extend %grid__item;
+		        @extend %one-half;
+				@extend %tablet--one-whole;
+				@extend %phone--one-whole;
+		}
+		
+		.description-txt {
+
+			img {float:left; 
+				width:80%;
+				margin: 0 10%;
+			}
+			
+			.txt-info {background : $red;
+					color: $white;
+					display:block;
+					text-align:center;
+					font-size:1.5em;
+					margin:1em 0;
+					padding:0.2em 0 0.2em 1em;
+					@include mq(tablet) {padding: 0.2em 0}
+					@include mq(phone) {padding: 0.2em 0}
+					
+			}			
+			
+		}
+		
+		.map-contact {margin: 2em auto 0; display:block;}
+		
+		
+		
+}
