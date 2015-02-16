@@ -13,19 +13,9 @@ get_header(); ?>
 		<main id="main" class="site-main-blog" role="main">
 
 		<?php if ( have_posts() ) : ?>
-			<?php
-			$args = array(
-				'cat'			 => 4,					// List la cat = Expositions
-				'order'			 => 'DESC',				// List in DESC order
-				'orderby'        => 'Id',				// List them by order de création
-				'post_status'    => null,				// For any post status
-			);
-	        $articles = new WP_Query();
-	        $articles->query($args);
-	        ?>
 
 			<?php /* Start the Loop */ ?>
-			<?php while ($articles->have_posts()) : $articles->the_post(); ?>				
+			<?php while ( have_posts() ) : the_post(); ?>			
 				
 				<article id="post-<?php the_ID(); ?>" <?php post_class('module-notes'); ?> >
 					<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -39,7 +29,6 @@ get_header(); ?>
 		<?php else : ?>
 
 			<?php get_template_part( 'no-results', 'archive' ); ?>
-		
 		
 		<?php endif; ?>
 
