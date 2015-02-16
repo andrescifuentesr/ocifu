@@ -99,7 +99,7 @@ function ocifu_scripts() {
 	wp_enqueue_style( 'ocifu-style', get_template_directory_uri() . '/css/build/minified/global.css', array(), '20150201', 'all' );
 
 	//Modernizr JS
-	wp_enqueue_script( 'ocifu-modernizr', get_template_directory_uri() . '/js/libs/modernizr.custom.63353.js', array(), '201308013', true );
+	wp_enqueue_script( 'ocifu-modernizr', get_template_directory_uri() . '/js/libs/modernizr.custom.63353.js', array(), '201308013', false );
 	
 	//Main JS
 	wp_enqueue_script( 'ocifu-main', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'), '20150201', true );
