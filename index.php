@@ -11,6 +11,14 @@
  * @package ocifu
  */
 
+if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+	wpcf7_enqueue_scripts();
+}
+
+// if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+// 	wpcf7_enqueue_styles();
+// }
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -24,32 +32,32 @@ get_header(); ?>
 				<div class="grid">
 					<div class="description description-1">
 						<div class="triangle triangle-1">
-							<img src="<?php bloginfo('template_directory'); ?>/img/description-1.svg" alt="description 1" class="description-image" >
 							<div class="description-txt">
 								<h2>I’m a web designer! </h2>
 								<p>After trying to become: Engineer, Musician, Architect... I have to admit:</p>
 								<h3>I love web</h3>
 							</div>
+							<img src="<?php bloginfo('template_directory'); ?>/img/description-1.svg" alt="description 1" class="description-image" >
 						</div>
 					</div><!-- End description-->
 				
 					<div class="description description-2">
 						<div class="triangle triangle-2">
-							<img src="<?php bloginfo('template_directory'); ?>/img/description-2.svg" alt="description 2" class="description-image image-alternate">				
 							<div class="description-txt">
 								<h2>I think responsively </h2>
 								<p>Content is universal. It does not depend on which device one uses or where one is.</p>
 							</div>
+							<img src="<?php bloginfo('template_directory'); ?>/img/description-2.svg" alt="description 2" class="description-image">
 						</div>
 					</div><!-- End description-->
 				
 					<div class="description description-3">
 						<div class="triangle triangle-3">
-							<img src="<?php bloginfo('template_directory'); ?>/img/description-3.svg" alt="description 3" class="description-image">
 							<div class="description-txt">
 								<h2>My favorites tools! </h2>
 								<p>There are always new techniques/tools to learn, but for the moment I'm sticking to these</p>
 							</div>
+							<img src="<?php bloginfo('template_directory'); ?>/img/description-3.svg" alt="description 3" class="description-image">
 						</div>
 					</div><!-- End description-->
 				

@@ -3,6 +3,14 @@
 Template Name: Contact
 */
 
+if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+	wpcf7_enqueue_scripts();
+}
+
+// if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+// 	wpcf7_enqueue_styles();
+// }
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">

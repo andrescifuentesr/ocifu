@@ -99,10 +99,14 @@ function ocifu_scripts() {
 	wp_enqueue_style( 'ocifu-style', get_template_directory_uri() . '/css/build/minified/global.css', array(), '20150201', 'all' );
 
 	//Modernizr JS
-	wp_enqueue_script( 'ocifu-modernizr', get_template_directory_uri() . '/js/libs/modernizr.custom.63353.js', array(), '201308013', false );
+	//we are include it directly. No need to support IE8
+	// wp_enqueue_script( 'ocifu-modernizr', get_template_directory_uri() . '/js/libs/modernizr.custom.63353.js', array(), '201308013', false );
 	
 	//Main JS
-	wp_enqueue_script( 'ocifu-main', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'), '20150201', true );
+	//We only call it on the portafolio page
+	if ( is_singular( 'work' ) OR is_page( 'work' ) ) {
+		wp_enqueue_script( 'ocifu-main', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'), '20150201', true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'ocifu_scripts' );
 
@@ -134,5 +138,5 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load all functions and filtres custom by me
  */
-require get_template_directory() . '/inc/mylibrary.php';
+require get_template_directory() . '/inc/template-functions.php';
 
