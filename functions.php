@@ -103,10 +103,7 @@ function ocifu_scripts() {
 	// wp_enqueue_script( 'ocifu-modernizr', get_template_directory_uri() . '/js/libs/modernizr.custom.63353.js', array(), '201308013', false );
 	
 	//Main JS
-	//We only call it on the portafolio page
-	if ( is_singular( 'work' ) OR is_page( 'work' ) ) {
-		wp_enqueue_script( 'ocifu-main', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'), '20150201', true );
-	}
+	wp_enqueue_script( 'ocifu-main', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'), '20150201', true );
 }
 add_action( 'wp_enqueue_scripts', 'ocifu_scripts' );
 
